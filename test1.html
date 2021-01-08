@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>HTML5 Boilerplate</title>
+    <meta name="description" content="Course website">
+    <meta name="author" content="Jan Jaap Siewers">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+
+    <style>
+        :root {
+            --black: #1c2b2d;
+            --blue: #1f6f8b;
+            --lightblue:#99a8b2;
+            --beige:#e6d5b8;
+            --white:#fff;
+        }
+
+        body {
+            background-color: var(--beige);
+            font-family: 'Roboto', sans-serif;
+            color: var(--black);
+            padding:0px;
+            margin:0px;
+        }
+
+        .header { grid-area: header; }
+        .logo { grid-area: logo; }
+        .visual { grid-area: visual; }
+
+        .nav-container {
+            display:grid;
+            grid-template-areas: 
+            "logo logo header header header header"
+            "visual visual visual visual visual visual";
+            grid-gap: 1rem;
+            background-color:var(--white);
+            padding:1rem;
+            margin-bottom:1rem;
+        }
+
+        .nav-container div {
+            border:1px solid black;
+        }
+
+        .nav {
+            text-align:right;
+            list-style-type: none;
+            padding:0px;
+            margin:0px;
+            margin-bottom:20px;
+        }
+
+        .nav  li {
+            display: inline-block;
+            margin-left:20px;
+        }       
+        .nav  li  a{
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 1rem;
+        }
+
+        .container > div {
+            background: var(--lightblue);
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="logo">
+            Logo
+        </div>
+        <div class="header">
+            <ul class="nav">
+                <li><a href="#">Menuitem 1</a></li>
+                <li><a href="#">Menuitem 2</a></li>
+                <li><a href="#">Menuitem 3</a></li>
+                <li><a href="#">Menuitem 4</a></li>
+            </ul>
+        </div>
+        <div class="visual">
+            image
+        </div>
+    </div>
+    <div class="visual">
+        image
+    </div>   
+    <div class="container">
+        <div>Lorem Ipsum</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+            felis blandit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+            felis blandit.</div>
+
+    </div>
+
+</body>
+
+</html> 
